@@ -1,4 +1,4 @@
-wire
+wire [![Build Status](https://secure.travis-ci.org/lsolesen/wire.png?branch=master)](http://travis-ci.org/lsolesen/wire)
 ==
 
 A dependency injection container. Wire was originally developed by Troels Knak-Nielsen to use with [Konstrukt](http://konstrukt.dk/). In recent versions konstrukt is now relying heavily on dependency injection, and does not rely on wire anymore.
