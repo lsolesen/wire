@@ -45,9 +45,6 @@ class test_ClassLoader
   }
 }
 
-// You need to have simpletest in your include_path
-require_once 'simpletest/unit_tester.php';
-require_once 'simpletest/mock_objects.php';
 if (realpath($_SERVER['PHP_SELF']) == __FILE__) {
   // Adds /lib/ to the path
   ini_set(
@@ -60,6 +57,10 @@ if (realpath($_SERVER['PHP_SELF']) == __FILE__) {
   spl_autoload_register(Array('test_ClassLoader', 'autoload'));
   require_once 'simpletest/autorun.php';
 }
+
+// You need to have simpletest in your include_path
+require_once 'simpletest/unit_tester.php';
+require_once 'simpletest/mock_objects.php';
 
 /*
 todo:
