@@ -8,8 +8,20 @@ This makes it public as a standalone version of the code to be used in other app
 Installation
 --
 
-	pear channel-discover pearhub.org
-	pear install pearhub/wire
+The easiest way to install Konstrukt, is through Composer. Add the following to your `composer.json`:
+
+    {
+      "repositories": [
+        {
+          "type": "git",
+          "url": "https://github.com/lsolesen/wire.git"
+        }
+      ],
+      "minimum-stability": "dev",
+      "require": {
+        "troelskn/wire": "*"
+      }
+    }
 
 Example usage
 --
@@ -20,5 +32,5 @@ Example usage
   		'$className, $args, $registry',
   		'return new pdoext_Connection("sqlite:../blog.sqlite", "root", "");'
 	));
-	
+
 	$pdo = $wire->get('pdo);
