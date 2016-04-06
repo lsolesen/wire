@@ -1,0 +1,47 @@
+{
+    "name": "troelskn/wire",
+    "type": "library",
+    "description": "A dependency injection container. Wire was originally developed by Troels Knak-Nielsen to use with Konstrukt. In recent versions konstrukt is now relying heavily on dependency injection, and does not rely on wire anymore.",
+    "keywords": [
+        "image", "exif"
+    ],
+    "homepage": "https://github.com/lsolesen/wire",
+    "authors": [
+        {
+            "name": "Troels Knak-Nielsen",
+            "email": "troelskn@gmail.com",
+            "homepage": "http://troelskn.com/",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-2.0+",
+    "require": {
+        "php": ">=5.0.0"
+    },
+    "require-dev" : {
+        "simpletest/simpletest": "1.1.*",
+        "squizlabs/php_codesniffer": "2.*"
+    },
+    "autoload": {
+        "files": [
+            "lib/wire/callbackfactory.php",
+            "lib/wire/configurablefactory.php",
+            "lib/wire/constantdependency.php",
+            "lib/wire/container.php",
+            "lib/wire/creator.php",
+            "lib/wire/defaultfactory.php",
+            "lib/wire/exception.php",
+            "lib/wire/iclassfactory.php",
+            "lib/wire/icreator.php",
+            "lib/wire/idependencysource.php",
+            "lib/wire/ilocator.php",
+            "lib/wire/ilocatorpropagationexception.php",
+            "lib/wire/registry.php",
+            "lib/wire/requireddependency.php",
+            "lib/wire/shareddependency.php",
+            "lib/wire/transientdependency.php",
+            "lib/wire/userdependency.php",
+            "lib/wire/userlandarguments.php"
+        ]
+    }
+}

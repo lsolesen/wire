@@ -51,6 +51,7 @@ if (realpath($_SERVER['PHP_SELF']) == __FILE__) {
     'include_path',
     "lib"
     . PATH_SEPARATOR . dirname(dirname(__FILE__))."/lib"
+    . PATH_SEPARATOR . dirname(dirname(__FILE__))."/vendor/simpletest"
     . PATH_SEPARATOR . ini_get('include_path'));
   error_reporting(E_ALL | E_STRICT);
   set_error_handler('test_exceptions_error_handler');

@@ -1,13 +1,11 @@
+sudo: false
 language: php
 php:
-  - 5.2
   - 5.3
-  - 5.4
-before_script:
-  - cd lib
-  - wget http://downloads.sourceforge.net/project/simpletest/simpletest/simpletest_1.1/simpletest_1.1.0.tar.gz
-  - tar -xvzf simpletest_1.1.0.tar.gz > /dev/null 2>&1 &
-  - rm simpletest/test -R
-  - phpenv rehash
-  - cd ..
+cache:
+  directories:
+    - $HOME/.composer/cache
+install:
+  - travis_retry composer self-update && composer --version
+  - travis_retry composer install  --prefer-dist --no-interaction
 script: php tests/wire.test.php --verbose
